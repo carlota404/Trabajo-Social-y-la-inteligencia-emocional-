@@ -1,23 +1,258 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-full">
 <head>
     <meta charset="UTF-8">
-    <title>Trabajo Social y la Inteligencia Emocional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO SOCIAL & INTELIGENCIA EMOCIONAL — CARLOTA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para iconos minimalistas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display (Serif sofisticada estilo Zara) + Montserrat (Sans ultra limpia) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandPink: '#e07a5f', // Rosa suave terracota / dusty pink sobrio estilo Zara
+                        brandSoftPink: '#e58f96', // Rosa de diseño chic
+                        deepPink: '#d86976', // Tono uniforme elegante
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'zara': '0.35em',
+                        'zara-wide': '0.5em',
+                        'zara-tight': '0.15em',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
+        /* Estilos personalizados para emular la estética de revista de moda/editorial de Zara */
         body {
-            background-color: pink; /* Fondo rosa */
-            color: white;           /* Texto en blanco */
+            /* Fondo rosa minimalista como fue pedido, con tipografía blanca de alto contraste */
+            background-color: #e07a8c;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.05em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Selección de texto elegante */
+        ::selection {
+            background-color: #ffffff;
+            color: #e07a8c;
+        }
+
+        .editorial-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .zara-border {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .zara-btn {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .zara-btn:hover {
+            background-color: #ffffff;
+            color: #e07a8c;
+        }
+
+        /* Scrollbar delgada y limpia */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e07a8c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffffff;
         }
     </style>
 </head>
-<body>
-    <h1>Hola, mundo</h1>
-    <h2> Carlota Cordón Pérez</h2>
-    <p>Este es el contenido visible de la página.</p>
-    <p>
-        <a href="https://youtu.be/8XRYWdv6l6E?si=MuuL2vvRFkX4NgxJ" target="_blank" style="color: white; text-decoration: underline;">
-            Ver vídeo en YouTube: INTELIGENCIA EMOCIONAL ¿Cómo CONTROLAR Las EMOCIONES? | Marian Rojas Estapé
-        </a>
-    </p>
+<body class="min-h-full flex flex-col justify-between selection:bg-white selection:text-pink-600">
+
+    <!-- BARRA SUPERIOR SOBRIA ESTILO ZARA -->
+    <header class="w-full border-b zara-border px-6 py-4 flex justify-between items-center text-xs tracking-zara uppercase font-light sticky top-0 backdrop-blur-md bg-opacity-90 z-50" style="background-color: rgba(224, 122, 140, 0.85);">
+        <div class="flex items-center space-x-6">
+            <span>EDICIÓN N° 01</span>
+            <span class="hidden md:inline border-l zara-border pl-6">TRABAJO SOCIAL</span>
+        </div>
+        <div class="text-center font-bold tracking-zara text-sm">
+            COLLECTION 2026
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#video-section" class="hover:underline tracking-widest text-[10px] md:text-xs">MULTIMEDIA</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-20 flex-grow w-full">
+
+        <!-- CABECERA PRINCIPAL ESTILO ZARA -->
+        <section class="text-center mb-20 md:mb-28 border-b zara-border pb-16">
+            <!-- TITULO H1 ESTILO ZARA: ENORME, MAYÚSCULAS Y ESPACIADO -->
+            <h1 class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-light tracking-zara uppercase mb-6 leading-tight font-sans">
+                TRABAJO SOCIAL <br/>
+                <span class="editorial-title italic font-normal tracking-normal lowercase text-4xl sm:text-6xl md:text-8xl">&amp;</span> INTELIGENCIA EMOCIONAL
+            </h1>
+
+            <!-- SUBTÍTULO H2 JUSTO DEBAJO CON EL NOMBRE "CARLOTA" -->
+            <div class="mt-8 flex flex-col items-center justify-center">
+                <span class="text-[10px] uppercase tracking-zara-wide mb-2 opacity-80 font-light">AUTORÍA Y EDICIÓN</span>
+                <h2 class="text-xl md:text-3xl font-light tracking-zara uppercase border-t border-b zara-border py-2 px-12 inline-block">
+                    CARLOTA
+                </h2>
+            </div>
+        </section>
+
+        <!-- SECCIÓN EDITORIAL MULTICOLUMNA DE CONTENIDO -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-start mb-24">
+
+            <!-- Columna lateral informativa / Manifiesto -->
+            <div class="md:col-span-4 border-l zara-border pl-6 space-y-8">
+                <div>
+                    <span class="text-[10px] tracking-zara uppercase opacity-75 font-semibold block mb-2">01 — VISIÓN GENERAL</span>
+                    <p class="text-sm font-light leading-relaxed opacity-95">
+                        El Trabajo Social trasciende la mera intervención asistencial. Constituye una disciplina basada en la comprensión profunda de la vulnerabilidad humana, donde la <strong>Inteligencia Emocional</strong> actúa como el eje vertebrador de la empatía, el diagnóstico sociológico y el cambio ético.
+                    </p>
+                </div>
+
+                <div class="pt-6 border-t zara-border">
+                    <span class="text-[10px] tracking-zara uppercase opacity-75 font-semibold block mb-2">02 — COMPETENCIAS CLAVE</span>
+                    <ul class="text-xs space-y-3 uppercase tracking-wider font-light">
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                            <span>Autoconocimiento del Profesional</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                            <span>Gestión del Desgaste Emocional</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                            <span>Empatía Terapéutica y Asertividad</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                            <span>Resolución de Conflictos Sociales</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bloque principal de lectura (Diseño de revista) -->
+            <div class="md:col-span-8 space-y-10">
+                <article class="space-y-6">
+                    <h3 class="editorial-title text-2xl md:text-4xl italic font-normal mb-4">
+                        "La emoción como herramienta de transformación colectiva."
+                    </h3>
+                    
+                    <p class="text-base md:text-lg font-light leading-relaxed text-justify">
+                        En el ejercicio del Trabajo Social, la capacidad de identificar, comprender y regular las propias emociones —así como las de las personas vulnerables a las que se acompaña— no es un elemento secundario, sino una herramienta indispensable. La práctica diaria exige intervenir en situaciones de alta carga sintomática y complejidad comunitaria.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 my-8 pt-6 border-t zara-border">
+                        <div>
+                            <h4 class="text-xs uppercase tracking-zara font-medium mb-3">Escucha Activa</h4>
+                            <p class="text-xs font-light leading-relaxed text-opacity-90">
+                                La intervención eficiente requiere sostener el sufrimiento ajeno sin caer en la sobreidentificación, creando un espacio seguro para el usuario.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs uppercase tracking-zara font-medium mb-3">Resiliencia Comunitaria</h4>
+                            <p class="text-xs font-light leading-relaxed text-opacity-90">
+                                Capacitar a los individuos no solo a nivel de recursos materiales, sino fortaleciendo su propia arquitectura afectiva y de autorregulación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm md:text-base font-light leading-relaxed text-justify opacity-95">
+                        Como señala la investigación en neurociencia aplicada al bienestar psicosocial, comprender la química de nuestros estados de ánimo nos permite diseñar estrategias de intervención social mucho más eficaces, sostenibles y humanas.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CITA EDITORIAL DESTACADA -->
+        <section class="w-full border-y zara-border py-16 my-20 text-center">
+            <blockquote class="editorial-title text-3xl md:text-5xl italic font-normal max-w-4xl mx-auto px-4 leading-snug">
+                "Conocerse a uno mismo es el primer paso para poder transformar la realidad social que nos rodea."
+            </blockquote>
+            <p class="mt-6 text-xs uppercase tracking-zara font-light">— NOTAS SOBRE EL TRABAJO SOCIAL</p>
+        </section>
+
+        <!-- SECCIÓN DE VÍDEO DESTACADA (MARIAN ROJAS ESTAPÉ) -->
+        <section id="video-section" class="pt-8 pb-16">
+            <div class="mb-10 text-center">
+                <span class="text-[10px] tracking-zara-wide uppercase block mb-2 opacity-80 font-light">RECURSO RECOMENDADO</span>
+                <h3 class="text-2xl md:text-4xl font-light tracking-zara uppercase font-sans">
+                    INTELIGENCIA EMOCIONAL
+                </h3>
+                <p class="editorial-title italic text-lg md:text-xl mt-2">¿Cómo controlar las emociones? — Dra. Marian Rojas Estapé</p>
+            </div>
+
+            <!-- Contenedor del Vídeo Embed / Tarjeta Editorial -->
+            <div class="max-w-4xl mx-auto border zara-border p-4 md:p-8 bg-black bg-opacity-10 backdrop-blur-sm rounded-none">
+                <!-- Aspect Ratio para el Iframe de YouTube -->
+                <div class="relative w-full aspect-video overflow-hidden border zara-border mb-6">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube-nocookie.com/embed/8XRYWdv6l6E" 
+                        title="INTELIGENCIA EMOCIONAL ¿Cómo CONTROLAR Las EMOCIONES? | Marian Rojas Estapé"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Botón Directo al enlace de YouTube -->
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t zara-border">
+                    <div class="text-left text-xs tracking-wide">
+                        <span class="font-medium block uppercase tracking-zara text-[11px]">Marian Rojas Estapé</span>
+                        <span class="font-light opacity-80">Conferencia sobre gestión emocional y neurociencia</span>
+                    </div>
+
+                    <a href="https://youtu.be/8XRYWdv6l6E?si=MuuL2vvRFkX4NgxJ" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 border border-white px-8 py-3 text-xs tracking-zara uppercase font-medium zara-btn text-center">
+                        <span>ABRIR EN YOUTUBE</span>
+                        <i class="fa-solid font-light fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER MINIMALISTA ESTILO ZARA -->
+    <footer class="w-full border-t zara-border py-12 px-6 text-center text-xs tracking-zara uppercase font-light space-y-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="font-bold">TRABAJO SOCIAL & INTELIGENCIA EMOCIONAL</span>
+            </div>
+            <div>
+                <span>DISEÑO EDITORIAL &bull; CARLOTA</span>
+            </div>
+            <div class="text-[10px] opacity-70">
+                &copy; 2026 TODOS LOS DERECHOS RESERVADOS
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
